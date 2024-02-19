@@ -1,0 +1,15 @@
+<mat-toolbar class="toolBar">
+    <ul class="inline-menu">
+        <li><button mat-button routerLink="/home" class="menuBtn">Home</button></li>
+        <li><button mat-button routerLink="/about" class="menuBtn">About</button></li>
+        <!-- Add more list items with buttons or links as needed -->
+    </ul>
+    <button  mat-button  [matMenuTriggerFor]="menu" class="menuBtn">Account</button>
+    <mat-menu #menu="matMenu">
+        
+        <button mat-menu-item (click)="openLoginDialog()">Login</button>
+        <button mat-menu-item (click)="openSignUpDialog()">Sign Up</button>
+    </mat-menu>
+    
+</mat-toolbar>
+  
