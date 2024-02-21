@@ -6,30 +6,39 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatMenuModule,
-    MatIconModule
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatDialogModule,
+      MatMenuModule,
+      MatIconModule,
+       
+     
+      FormsModule, 
+      ReactiveFormsModule,
+      MatFormFieldModule,
+      MatInputModule
     
 
 
