@@ -1,0 +1,55 @@
+<div class="example-container" *ngIf="showForm">
+    <h2>Sign up</h2>
+    <button class="close-button" (click)="closeForm()">X</button>
+<!--firstname-->
+    <mat-form-field class="custom-form-field">
+        <mat-label>Enter your first name</mat-label>
+        <input matInput  name="firstName" required>
+        <mat-error *ngIf="firstname.invalid">{{ getfirstNameErrorMessage(firstname, 'firstname') }}</mat-error>    
+      </mat-form-field>
+<!--lastname-->
+      <mat-form-field class="custom-form-field">
+        <mat-label>Enter your last name</mat-label>
+        <input matInput  [formControl]="lastname" required> 
+        <mat-error *ngIf="firstname.invalid">{{ getlastNameErrorMessage(lastname, 'lastname') }}</mat-error>  
+      </mat-form-field>
+<!--email-->
+    <mat-form-field class="custom-form-field">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      
+        <mat-error *ngIf ="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+<!--password-->
+ <mat-form-field class="custom-form-field" [formGroup]="passwordForm">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  
+  <!-- Confirm Password -->
+  <mat-form-field class="custom-form-field" [formGroup]="passwordForm">
+    <mat-label>Confirm password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmPassword">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  
+  <button class="loginBtn" (click)="onSubmit()">
+    Sign up
+  </button>
+  
+  <!-- Display error message -->
+  <div *ngIf="passwordForm.hasError('mismatch')">
+    Passwords do not match.
+  </div>
+  
+  
+  
+    
+      
+  
+  </div>

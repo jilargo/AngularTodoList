@@ -11,6 +11,8 @@ import {FormControl, Validators} from '@angular/forms';
   
 })
 export class LoginComponent {
+  showForm : boolean = true;
+  hide:boolean = true;
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
@@ -19,5 +21,10 @@ export class LoginComponent {
     }
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+  
+
+  closeForm(){
+    this.showForm = false;
   }
 }

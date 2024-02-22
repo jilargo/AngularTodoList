@@ -15,13 +15,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import {MatInputModule} from '@angular/material/input';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     ThemeToggleComponent,
+    SignUpComponent,
     
   ],
   imports: [
@@ -38,7 +40,8 @@ import {MatInputModule} from '@angular/material/input';
       FormsModule, 
       ReactiveFormsModule,
       MatFormFieldModule,
-      MatInputModule
+      MatInputModule,
+      MatSnackBarModule
     
 
 
