@@ -27,7 +27,7 @@ export class SignUpComponent {
     this.passwordForm = this.formBuilder.group({
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]]
-    }, { validator: this.checkPasswords });
+    }, { validator: this.checkPasswords.bind(this) });
    }
   
   firstNameErrorMessage() {

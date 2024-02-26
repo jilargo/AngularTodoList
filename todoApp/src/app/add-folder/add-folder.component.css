@@ -1,0 +1,30 @@
+.example-container{
+    width:20em;
+    height: 20em;
+    padding: 2em;
+}
+.close-button{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+  .input-song-field{
+    width: 17em;
+    margin: 0 auto;
+  }
+  .submitBtn{
+    background-color: #3f4f5a; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 17em;
+    margin: 0 auto;
+  }
+  .submitBtn:hover{
+    background-color: rgb(0, 146, 146);
+    
+  }
+  

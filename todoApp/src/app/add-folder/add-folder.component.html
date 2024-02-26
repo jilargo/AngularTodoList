@@ -1,0 +1,15 @@
+<div class="example-container" *ngIf="showForm">
+    <h2>Add list name</h2>
+    <button class="close-button" (click)="closeForm()">X</button>
+    <mat-form-field class="input-song-field">
+        <mat-label>Enter list name</mat-label>
+        <input matInput [(ngModel)]="newList.name"  required>  
+    </mat-form-field>
+    <mat-form-field class="input-song-field">
+        <mat-label>Description/Genre</mat-label>
+        <input matInput [(ngModel)]="newList.description"  required>  
+    </mat-form-field>
+    <button (click)="submitForm()" class="submitBtn">
+        Submit
+    </button>
+</div>

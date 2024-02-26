@@ -17,6 +17,9 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import {MatInputModule} from '@angular/material/input';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AddFolderComponent } from './add-folder/add-folder.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     ThemeToggleComponent,
     SignUpComponent,
+    AddFolderComponent,
     
   ],
   imports: [
@@ -41,8 +45,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
       ReactiveFormsModule,
       MatFormFieldModule,
       MatInputModule,
-      MatSnackBarModule
-    
+      MatSnackBarModule,
+      HttpClientModule
 
 
   ],

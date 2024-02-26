@@ -32,19 +32,37 @@ export class SignUpHelperService {
     return email.hasError('email') ? 'Not a valid email' : '';
   }
   //password
+  // checkPasswords(group: FormGroup): any {
+  //   const passwordControl = group.get('password');
+  //   const confirmPasswordControl = group.get('confirmPassword');
+
+  //   if (!passwordControl || !confirmPasswordControl) {
+  //     // Handle the case where controls are null (optional)
+  //     return { mismatch: true };
+  //   }
+
+  //   const password = passwordControl.value;
+  //   const confirmPassword = confirmPasswordControl.value;
+
+  //   return password === confirmPassword ? null : { mismatch: true };
+  // }
   checkPasswords(group: FormGroup): any {
+    if (!group) {
+      return { mismatch: true };  // Handle the case where the group is null
+    }
+  
     const passwordControl = group.get('password');
     const confirmPasswordControl = group.get('confirmPassword');
-
+  
     if (!passwordControl || !confirmPasswordControl) {
-      // Handle the case where controls are null (optional)
-      return { mismatch: true };
+      return { mismatch: true };  // Handle the case where controls are null (optional)
     }
-
+  
     const password = passwordControl.value;
     const confirmPassword = confirmPasswordControl.value;
-
+  
     return password === confirmPassword ? null : { mismatch: true };
   }
+  
 
 }

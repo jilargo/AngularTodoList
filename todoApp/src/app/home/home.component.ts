@@ -1,6 +1,7 @@
 import { Component,OnDestroy } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { AddFolderComponent } from '../add-folder/add-folder.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DarkModeService } from '../services/dark-mode.service'; 
 import { Subscription } from 'rxjs';
@@ -46,6 +47,10 @@ export class HomeComponent implements OnDestroy {
   openSignUpDialog() {
     this.dialog.open(SignUpComponent);
   }
+  openAddFolderDialog(){
+    this.dialog.open(AddFolderComponent);
+  }
+   
   // darkMode = false;
   // toggleDarkMode() {
   //   this.darkMode = !this.darkMode;
