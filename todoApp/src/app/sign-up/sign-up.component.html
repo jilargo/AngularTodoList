@@ -4,14 +4,15 @@
 <!--firstname-->
     <mat-form-field class="custom-form-field">
         <mat-label>Enter your first name</mat-label>
-        <input matInput  name="firstName" required>
-        <mat-error *ngIf="firstname.invalid">{{ getfirstNameErrorMessage(firstname, 'firstname') }}</mat-error>    
+        <input matInput   [formControl]="firstname" required>
+        <mat-error *ngIf="firstname.invalid">{{ firstNameErrorMessage() }}</mat-error>
+    
       </mat-form-field>
 <!--lastname-->
       <mat-form-field class="custom-form-field">
         <mat-label>Enter your last name</mat-label>
         <input matInput  [formControl]="lastname" required> 
-        <mat-error *ngIf="firstname.invalid">{{ getlastNameErrorMessage(lastname, 'lastname') }}</mat-error>  
+        <mat-error *ngIf="lastname.invalid">{{ getlastNameErrorMessage() }}</mat-error>  
       </mat-form-field>
 <!--email-->
     <mat-form-field class="custom-form-field">
